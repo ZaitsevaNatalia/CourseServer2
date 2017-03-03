@@ -28,5 +28,11 @@
 			<artifactId>common-protocol</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.softgroup</groupId>
+			<artifactId>common-factory</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
 	</dependencies>
 </project>

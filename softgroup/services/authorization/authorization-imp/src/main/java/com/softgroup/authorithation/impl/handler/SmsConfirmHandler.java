@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * Created by zajan on 03.03.2017.
  */
 @Service
-public class SmsConfirm extends AbstractRequestHandler implements AuthorizationRequestHandler {
+public class SmsConfirmHandler extends AbstractRequestHandler implements AuthorizationRequestHandler {
 
     public String getName() {
         return "sms_confirm";
