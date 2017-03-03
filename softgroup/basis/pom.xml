@@ -14,6 +14,7 @@
         <module>common-datamapper</module>
         <module>common-router</module>
         <module>common-protocol</module>
+        <module>common-factory</module>
 
     </modules>
 
@@ -23,6 +24,16 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.softgroup</groupId>
+            <artifactId>common-protocol</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.softgroup</groupId>
+            <artifactId>common-router</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
 
     </dependencies>
 
