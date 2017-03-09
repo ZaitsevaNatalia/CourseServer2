@@ -15,7 +15,7 @@ import java.io.Serializable;
  * Created by zajan on 03.03.2017.
  */
 @Service
-public class LoginHandler<T extends AbstractRequestHandler> implements AuthorizationRequestHandler {
+public class LoginHandler extends AbstractRequestHandler implements AuthorizationRequestHandler {
 
     public String getName() {
         return "login";

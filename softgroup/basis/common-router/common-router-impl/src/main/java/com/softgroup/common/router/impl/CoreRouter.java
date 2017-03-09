@@ -1,16 +1,17 @@
-package com.softgroup.common.router.api;
+package com.softgroup.common.router.impl;
 
-import com.softgroup.common.factory.CoreFactory;
 import com.softgroup.common.protocol.Request;
 import com.softgroup.common.protocol.Response;
+import com.softgroup.common.router.api.AbstractRouterHandler;
+import com.softgroup.common.router.api.Handler;
+import com.softgroup.common.router.api.HandlerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * Created by zajan on 3/3/2017.
- */
+
 public class CoreRouter<T extends AbstractRouterHandler> {
+
     @Autowired
-    private CoreFactory coreFactory;
+    private TypeFactory typeFactory;
 
     public String getName()
     {
@@ -18,7 +19,7 @@ public class CoreRouter<T extends AbstractRouterHandler> {
     }
 
     public Response<?> handle(Request<?> msg) {
-        Handler handler = coreFactory.getHandler(msg);
+        Handler handler = typeFactory.getHandler(msg);
         return handler.handle(msg);
     }
 

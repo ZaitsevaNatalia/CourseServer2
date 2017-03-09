@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * Created by zajan on 3/3/2017.
  */
 @Service
-public class ContactsSyncHandler<T extends AbstractRequestHandler> implements ProfileRequestHandler {
+public class ContactsSyncHandler extends AbstractRequestHandler implements ProfileRequestHandler {
     public String getName() {
         return "contacts_sync";
     }

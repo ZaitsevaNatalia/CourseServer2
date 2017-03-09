@@ -15,7 +15,6 @@
 
 		<module>authorization</module>
         <module>profile</module>
-        <module>profile</module>
     </modules>
 
 	<properties>
@@ -55,11 +54,6 @@
 		<dependency>
 			<groupId>com.softgroup</groupId>
 			<artifactId>common-router</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.softgroup</groupId>
-			<artifactId>common-factory</artifactId>
-			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 

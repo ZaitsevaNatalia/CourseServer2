@@ -1,8 +1,5 @@
-package com.softgroup.common.factory;
+package com.softgroup.common.router.api;
 
-/**
- * Created by zajan on 03.03.2017.
- */
 import com.softgroup.common.protocol.Request;
 import com.softgroup.common.router.api.Handler;
 

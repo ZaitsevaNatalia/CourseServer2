@@ -10,6 +10,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>authorization-api</artifactId>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.softgroup</groupId>
+			<artifactId>common-router-api</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
 
 
 

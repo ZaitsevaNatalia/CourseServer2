@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * Created by zajan on 3/3/2017.
  */
 @Service
-public class GetContactProfilesHandler<T extends AbstractRequestHandler> implements ProfileRequestHandler {
+public class GetContactProfilesHandler extends AbstractRequestHandler implements ProfileRequestHandler {
     public String getName() {
         return "get_contact_profiles";
     }

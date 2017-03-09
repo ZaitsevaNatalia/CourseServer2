@@ -1,8 +1,8 @@
-package com.softgroup.common.factory;
+package com.softgroup.common.router.impl;
 
 import com.softgroup.common.protocol.Request;
-import com.softgroup.common.router.api.CommonRouterHandler;
-import com.softgroup.common.router.api.Handler;
+import com.softgroup.common.protocol.Response;
+import com.softgroup.common.router.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by zajan on 3/3/2017.
- */
 @Service
-public class CoreFactory<T extends AbstractHandlerFactory> {
+public class TypeFactory implements HandlerFactory<CommonRouterHandler>{
+
     private Map<String, Handler> handlerMap= new HashMap<String, Handler>();
 
     @Autowired
@@ -29,12 +27,13 @@ public class CoreFactory<T extends AbstractHandlerFactory> {
         }
     }
 
+
     public Handler getHandler(Request<?> msg) {
-        String key = this.getKey(msg);
+        String key = this.getRouteKey(msg);
         return handlerMap.get(key);
     }
 
-    public String getKey(Request<?> msg)
+    public String getRouteKey(Request<?> msg)
     {
         return msg.getHeader().getType();
     }
@@ -42,5 +41,10 @@ public class CoreFactory<T extends AbstractHandlerFactory> {
     public String getName()
     {
         return "RoutingFactory";
+    }
+
+    public Response<?> handle(final Request<?> msg)
+    {
+        return null;
     }
 }
