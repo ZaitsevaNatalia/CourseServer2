@@ -18,6 +18,7 @@ import java.io.Serializable;
 @Service
 public class RegistrationHandler extends AbstractRequestHandler implements AuthorizationRequestHandler {
 
+    public String id = "registrationHandler";
     public String getName() {
         return "register";
     }

@@ -8,9 +8,8 @@ public abstract class AbstractRouterHandler implements RouterHandler {
     public abstract HandlerFactory getHandlerFactory();
 
     @Override
-    public Response<?> handle(Request<?> msg)
-    {
-            return getHandlerFactory().getHandler(msg).handle(msg);
+    public Response<?> handle(Request<?> msg) {
+        return getHandlerFactory().getHandler(msg).handle(msg);
     }
 
 }

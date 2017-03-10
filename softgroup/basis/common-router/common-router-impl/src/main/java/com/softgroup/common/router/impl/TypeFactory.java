@@ -12,14 +12,15 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class TypeFactory implements HandlerFactory<CommonRouterHandler>{
+public class TypeFactory implements HandlerFactory<RouterHandler>{
 
     private Map<String, Handler> handlerMap= new HashMap<String, Handler>();
 
     @Autowired
-    private List<CommonRouterHandler> handlers;
+    private List<RouterHandler> handlers;
 
     @PostConstruct
+
     public void init(){
         for (Handler handler : handlers)
         {

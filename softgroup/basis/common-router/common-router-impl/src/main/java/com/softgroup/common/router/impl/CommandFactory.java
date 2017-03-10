@@ -24,8 +24,7 @@ public class CommandFactory<T extends RequestHandler> {
 
     @PostConstruct
     public void init(){
-        for (Handler handler : handlers)
-        {
+        for (Handler handler : handlers) {
             handlerMap.put(handler.getName(), handler);
         }
     }
